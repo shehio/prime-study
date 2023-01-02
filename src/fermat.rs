@@ -1,13 +1,12 @@
 use rand::Rng;
 use crate::common::{Kind, mod_pow};
 
-pub fn is_prime(n: u32, rounds: u32) -> Kind {
-    let n_64 = n as u64;
+pub fn is_prime(n: u64, rounds: u32) -> Kind {
     let mut rng = rand::thread_rng();
 
     for _i in 0..rounds {
-        let a: u64 = rng.gen_range(2 .. n_64 - 2);
-        if mod_pow(a, n_64 - 1, n_64) == 1 {
+        let a = rng.gen_range(2 .. n - 2);
+        if mod_pow(a, n - 1, n) == 1 {
             return Kind::ProbablyPrime
         }
     }
