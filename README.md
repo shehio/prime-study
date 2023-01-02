@@ -1,3 +1,5 @@
 # prime-study
-From Fermat to Reimann
-<img src="https://www.3blue1brown.com/content/lessons/2016/zeta/riemann_anim.png">
+From Fermat  Euler and Reimann
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/3/34/Spirale_Ulam_150.jpg">
+<div align="center">An Ulam Spiral indicates the distribution of prime numbers. </div>
