@@ -9,11 +9,9 @@ pub fn is_carmichael(n: u32) -> CompositeKind {
     let mut charmichael = true;
 
     for i in 2 .. n_64 - 1 {
-        if !relatively_prime(i, n_64) {
-            continue;
-        }
-
-        if mod_exp(i, n_64 - 1, n_64) == 1 {
+        // This could also be expressed as mod_exp(i, n_64 - 1, n_64) == 1, only for i that is
+        // relatively prime to n_64.
+        if mod_exp(i, n_64, n_64) == i {
             liar = true;
         } else {
             charmichael = false;

@@ -6,7 +6,7 @@ mod carmichael;
 use crate::miller_rabin::is_composite;
 use crate::fermat::is_prime;
 use crate::carmichael::is_carmichael;
-use crate::common::{gcd, relatively_prime};
+use crate::common::{gcd, mod_pow, relatively_prime};
 
 fn main() {
     println!("{}", is_composite(23, 2));
