@@ -1,8 +1,7 @@
 use rand::Rng;
 use crate::common::{Kind, mod_pow};
 
-pub fn is_composite(probably_prime: u32, rounds: u32) -> Kind {
-    let n = probably_prime;
+pub fn is_composite(n: u32, rounds: u32) -> Kind {
     let n_64 = n as u64;
 
     let (d, s) = find_s_d(n);
