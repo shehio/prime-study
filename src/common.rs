@@ -63,3 +63,9 @@ pub fn gcd(mut m: u64, mut n: u64) -> u64 {
 
     return minimum;
 }
+
+pub fn is_square(mut m: u64) -> bool {
+    let m_64 = m as f64;
+    let sqrt = m_64.sqrt() as u64;
+    return sqrt * sqrt == m;
+}
