@@ -1,5 +1,6 @@
 use std::{cmp, fmt};
 
+#[derive(PartialEq)]
 pub enum Kind {
     Composite,
     Prime,
@@ -68,4 +69,20 @@ pub fn is_square(mut m: u64) -> bool {
     let m_64 = m as f64;
     let sqrt = m_64.sqrt() as u64;
     return sqrt * sqrt == m;
+}
+
+// inefficient implementation
+pub fn get_factors(mut m: u64) -> Vec<u64> {
+    let mut vec = Vec::new();
+    for i in 1 .. (m + 1) {
+        if m % i == 0 {
+            vec.push(i)
+        }
+    }
+
+    return vec;
+}
+
+pub fn divides(m: u64, n: u64) -> bool {
+    return n % m == 0;
 }
