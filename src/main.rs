@@ -3,11 +3,13 @@ mod common;
 mod fermat;
 mod carmichael;
 mod korselt;
+mod aks;
 
 use crate::miller_rabin::is_composite;
 use crate::fermat::is_prime;
 use crate::carmichael::is_carmichael;
 use crate::korselt::is_carmichael as is_korselt_carmichael;
+use crate::aks::is_prime as is_aks_prime;
 use crate::common::{divides, gcd, get_factors, is_square, mod_pow, relatively_prime};
 
 fn main() {
@@ -33,4 +35,8 @@ fn main() {
 
     println!("{}", divides(2, 560));
     println!("{}", is_korselt_carmichael(561));
+
+    println!("{}", is_aks_prime(97));
+    println!("{}", is_aks_prime(78));
+    println!("{}", is_aks_prime(23));
 }
